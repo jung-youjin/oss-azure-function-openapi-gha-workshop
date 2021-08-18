@@ -1,0 +1,18 @@
+name: LGTM
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: micnncim/action-lgtm-reaction@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GIPHY_API_KEY: ${{ secrets.GIPHY_API_KEY }}
+        with:
+          trigger: '[".*looks good to me.*", "^lgtm$", "^[gG]ood [jJ]ob!?$"]'
+          override: true
+          source: 'giphy'
