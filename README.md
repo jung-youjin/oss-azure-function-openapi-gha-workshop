@@ -1,0 +1,1 @@
+# oss-azure-function-openapi-gha-workshop
