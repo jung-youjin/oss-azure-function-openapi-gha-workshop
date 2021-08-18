@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Hello Team
+name: Hello osca
 
 # Controls when the workflow will run
 on: push
@@ -17,7 +17,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - name: Hello Team
+      - name: Hello osca members
         uses: ./.github/actions/hello-osca
         with:
           member: "YouJin Jung"
